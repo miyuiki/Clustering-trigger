@@ -25,12 +25,12 @@ def get_data(contents_list_file, field_list_file):
     query1 = "SET @contents_list = ('{}');".format(contents_list_str)
     query2 = "select {} from bookroll.br_event_log where find_in_set(contents_name, @contents_list) > 0;".format(field_list_str)
 
-    host = '140.115.197.85'
-    port = 3306
-    ssh_user = 'kslab'
-    ssh_password = 'Kslab35356!'
-    db_user = 'root'
-    db_password = 'Kslab35356'
+    host = os.getenv('SSH_HOST')
+    port = os.getenv('SSH_PORT')
+    ssh_user = os.getenv('SSH_USER')
+    ssh_password = os.getenv('SSH_PASSWORD')
+    db_user = os.getenv('MYSQL_USER')
+    db_password = os.getenv('MYSQL_PASSWORD')
     query = [query1, query2]
 
     data = bookrollDB.connect_and_excute(host, port, ssh_user, ssh_password, db_user, db_password, query)
