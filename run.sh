@@ -5,4 +5,4 @@ export SSH_PASSWORD="Kslab35356!"
 export MYSQL_USER="root"
 export MYSQL_PASSWORD="Kslab35356"
 
-python main.py 
+python3 main.py 
