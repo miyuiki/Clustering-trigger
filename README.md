@@ -9,7 +9,7 @@
 5. numpy
 6. pymongo
 ## Usage
-將需要撈取的教材名稱寫在`contents.txt`中，需要撈取的欄位寫在`fields.txt`中，執行`sh run.sh`即可
+將需要撈取的教材名稱寫在`contents.txt`中，需要撈取的欄位寫在`fields.txt`中，執行`sh run.sh`即可，
 若只需要連線至Mysql並作前處理可以用以下程式碼
 `import preprocess`
 `data = preprocess.getdata('contents.txt', 'fields.txt')`
