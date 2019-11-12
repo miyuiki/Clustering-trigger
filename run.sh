@@ -1,11 +1,11 @@
-export SSH_HOST="140.115.197.85"
-export MYSQL_PORT=3306
-export SSH_USER="kslab"
-export SSH_PASSWORD="Kslab35356!"
-export MYSQL_USER="root"
-export MYSQL_PASSWORD="Kslab35356"
-export MONGO_HOST="140.115.53.147"
-export MONGO_USER="readWrite_user"
-export MONGO_PASSWORD="kslab_readwrite"
+export SSH_HOST=
+export MYSQL_PORT=
+export SSH_USER=
+export SSH_PASSWORD=
+export MYSQL_USER=
+export MYSQL_PASSWORD=
+export MONGO_HOST=
+export MONGO_USER=
+export MONGO_PASSWORD=
 
 python3 main.py 
