@@ -2,6 +2,7 @@ import preprocess
 import classifier
 import pandas as pd
 import mongoDB
+import os
 
 raw_data, fields = preprocess.get_data('contents.txt', 'fields.txt')
 data = preprocess.preprocess(data=raw_data, fields=fields)
@@ -27,9 +28,9 @@ k4_centers.to_json('output/k4_centers.json', orient='index')
 k5_centers.to_json('output/k5_centers.json', orient='index')
 
 #write data to mongodb
-client = mongoDB.connect(host='140.115.53.147', port='27017', username='readWrite_user', password='kslab_readwrite')
-mongoDB.update(client, 'preprocessed_data', 'preprocessed.json')
-mongoDB.update(client, 'id_clustering', 'class_df.json')
-mongoDB.update(client, 'k3_centers', 'k3_centers.json')
-mongoDB.update(client, 'k4_centers', 'k4_centers.json')
-mongoDB.update(client, 'k5_centers', 'k5_centers.json')
+client = mongoDB.connect(host=os.getenv('MONGO_HOST'), port='27017', username=os.getenv('MONGO_USER'), password=os.getenv('MONGO_PASSWORD'))
+mongoDB.update(client, 'preprocessed_data', 'output/preprocessed.json')
+mongoDB.update(client, 'id_clustering', 'output/class_df.json')
+mongoDB.update(client, 'k3_centers', 'output/k3_centers.json')
+mongoDB.update(client, 'k4_centers', 'output/k4_centers.json')
+mongoDB.update(client, 'k5_centers', 'output/k5_centers.json')
