@@ -26,7 +26,7 @@ def get_data(contents_list_file, field_list_file):
     query2 = "select {} from bookroll.br_event_log where find_in_set(contents_name, @contents_list) > 0;".format(field_list_str)
 
     host = os.getenv('SSH_HOST')
-    port = os.getenv('SSH_PORT')
+    port = os.getenv('MYSQL_PORT')
     ssh_user = os.getenv('SSH_USER')
     ssh_password = os.getenv('SSH_PASSWORD')
     db_user = os.getenv('MYSQL_USER')
