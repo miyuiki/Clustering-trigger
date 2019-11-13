@@ -52,9 +52,9 @@ k5_centers.to_json('output/k5_centers.json', orient='index')
 
 #write data to mongodb
 if use_mongo:
-    client = mongoDB.connect(host=os.getenv('MONGO_HOST'), port='27017', username=os.getenv('MONGO_USER'), password=os.getenv('MONGO_PASSWORD'))
-    mongoDB.update(client, 'preprocessed_data', 'output/preprocessed.json')
-    mongoDB.update(client, 'id_clustering', 'output/class_df.json')
-    mongoDB.update(client, 'k3_centers', 'output/k3_centers.json')
-    mongoDB.update(client, 'k4_centers', 'output/k4_centers.json')
-    mongoDB.update(client, 'k5_centers', 'output/k5_centers.json')
+    client = db.mongoDB.connect(host=os.getenv('MONGO_HOST'), port='27017', username=os.getenv('MONGO_USER'), password=os.getenv('MONGO_PASSWORD'))
+    db.mongoDB.update(client, 'preprocessed_data', 'output/preprocessed.json')
+    db.mongoDB.update(client, 'id_clustering', 'output/class_df.json')
+    db.mongoDB.update(client, 'k3_centers', 'output/k3_centers.json')
+    db.mongoDB.update(client, 'k4_centers', 'output/k4_centers.json')
+    db.mongoDB.update(client, 'k5_centers', 'output/k5_centers.json')

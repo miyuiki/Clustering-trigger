@@ -36,7 +36,7 @@ def get_data(course_name):
     db_password = os.getenv('MYSQL_PASSWORD')
     # query = [query1, query2]
 
-    data = bookrollDB.connect_and_excute(host, port, ssh_user, ssh_password, db_user, db_password, query)
+    data = db.bookrollDB.connect_and_excute(host, port, ssh_user, ssh_password, db_user, db_password, query)
 
     return data
 
