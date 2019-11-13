@@ -13,5 +13,7 @@
 ## Usage
 修改run.sh填入所需的變數，並在參數列指定需要撈取的教材，執行`sh run.sh`即可，
 若只需要連線至Mysql並作前處理可以用以下程式碼
-`import preprocess`
-`data = preprocess.getdata('contents.txt', 'fields.txt')`
+```python
+import preprocess
+data = preprocess.getdata('contents.txt', 'fields.txt')
+```
