@@ -15,5 +15,5 @@
 若只需要連線至Mysql並作前處理可以用以下程式碼
 ```python
 import preprocess
-data = preprocess.getdata('contents.txt', 'fields.txt')
+data = preprocess.getdata(course_name=args.course_name)
 ```
