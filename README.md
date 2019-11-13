@@ -8,8 +8,10 @@
 4. sklearn
 5. numpy
 6. pymongo
+7. pymysql
+8. sqlalchemy
 ## Usage
-將需要撈取的教材名稱寫在`contents.txt`中，需要撈取的欄位寫在`fields.txt`中，執行`sh run.sh`即可，
+修改run.sh填入所需的變數，並在參數列指定需要撈取的教材，執行`sh run.sh`即可，
 若只需要連線至Mysql並作前處理可以用以下程式碼
 `import preprocess`
 `data = preprocess.getdata('contents.txt', 'fields.txt')`
