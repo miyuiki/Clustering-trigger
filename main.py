@@ -1,7 +1,7 @@
 import preprocess
 import classifier
 import pandas as pd
-import mongoDB
+import db.mongoDB
 import os
 from db.mysql import write_df_to_mysql
 from argparse import ArgumentParser

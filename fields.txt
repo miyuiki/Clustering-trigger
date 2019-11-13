@@ -1,6 +1,0 @@
-log_id
-contents_id
-contents_name
-operation_date
-operation_name
-user_id
