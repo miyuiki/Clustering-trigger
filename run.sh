@@ -8,4 +8,4 @@ export MONGO_HOST=
 export MONGO_USER=
 export MONGO_PASSWORD=
 
-python3 main.py 
+python3 main.py --course-name=COURSE_NAME --use-mongo=true --use-mysql=true
